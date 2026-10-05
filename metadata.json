@@ -1,0 +1,6 @@
+{
+  "name": "KeyPulse - Precision Typing & Keyboard Trainer",
+  "description": "Master keyboard accuracy and speed with opacity-faded prompt text, bold black word completions, active character guidance, and real-time performance analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
