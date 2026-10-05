@@ -4,73 +4,31 @@
   "version": "1.0.0",
   "description": "KeyPulse - Precision Typing & Keyboard Trainer",
   "type": "module",
-  "main": "electron/main.cjs",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
-    "clean": "rm -rf dist release",
+    "clean": "rm -rf dist release src-tauri/target",
     "lint": "tsc --noEmit",
-    "electron:build": "vite build && electron-builder --win",
-    "electron:build:portable": "vite build && electron-builder --win portable",
-    "electron:dev": "electron ."
-  },
-  "build": {
-    "appId": "com.keypulse.typing",
-    "productName": "KeyPulse",
-    "directories": {
-      "output": "release"
-    },
-    "files": [
-      "dist/**/*",
-      "electron/**/*",
-      "package.json"
-    ],
-    "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "portable",
-          "arch": [
-            "x64"
-          ]
-        }
-      ]
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true,
-      "shortcutName": "KeyPulse"
-    }
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
   },
   "dependencies": {
-    "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.3.3",
     "@vitejs/plugin-react": "^6.1.1",
     "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
-    "vite": "^8.3.0",
-    "express": "^4.21.2",
-    "dotenv": "^17.2.3",
-    "motion": "^12.23.24"
+    "vite": "^8.3.0"
   },
   "devDependencies": {
-    "@types/express": "^4.17.21",
+    "@tauri-apps/cli": "^2.12.1",
     "@types/node": "^22.14.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.21",
-    "electron": "^44.5.1",
-    "electron-builder": "^26.15.3",
-    "esbuild": "^0.28.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2"

@@ -56,8 +56,9 @@ Ouvrez `http://localhost:3000` dans votre navigateur.
 npm run build
 ```
 
-### Compiler le fichier .exe en local (sous Windows)
+### Compiler le fichier .exe en local (nécessite Rust)
 ```bash
-npm run electron:build
+npm run tauri:build
 ```
-Les exécutables générés se trouveront dans le dossier `release/`.
+L'exécutable ultra-léger (~5 à 10 Mo) et l'installeur (~3 à 6 Mo) seront générés via Tauri et WebView2.
+
